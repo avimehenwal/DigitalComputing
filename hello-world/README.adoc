@@ -1,6 +1,65 @@
+## Compiling and running VHDL using GHDL
+
 ----
- 5738  ghdl -s hello.vhdl
- 5740  ghdl -a hello.vhdl
- 5742  ghdl -e hello-world
- 5745  ghdl -r hello_world
+ 5738  ghdl -s hello.vhdl     # syntax
+ 5740  ghdl -a hello.vhdl     # analyse
+ 5742  ghdl -e hello-world    # elaborate
+ 5745  ghdl -r hello_world    # run
 ----
+
+### Test Bench syntax
+
+[source,vhdl]
+----
+entity testbench_ent is
+  <entity definition>
+end entity testbench_ent;
+
+architecture testbench_arch of testbench_ent is
+
+  <signal declarations>
+
+  <component declarations>
+
+begin
+
+  <component instantiations>
+
+  <stimuli (test vectors)>   // <1>
+  // <2>
+end architecture testbench_arch;
+----
+<1> All the simulation results are reported using the *assert* and *report* statements.
+
+.test_bench.vhdl
+[source,vhdl]
+----
+entity Test_Decoder_bcd is
+end entity Test_Decoder_bcd;
+architecture Struct_1 of Test_Decoder_bcd is
+component Decoder_bcd is
+port (
+  enable : in BIT;
+  led : in std_ulogic_vector(3 downto 0);
+  bcd : out BIT_VECTOR(1 downto 0));
+end component Decoder_bcd;
+signal bcd: BIT_VECTOR(1 downto 0) := "11";
+signal Enable: BIT := '1';
+signal led: std_ulogic_vector (3 downto 0);
+begin
+  U1: Decoder_bcd port map (Enable,led,bcd);
+     bcd <= "00" after 5 ns,
+            "01" after 15 ns,
+            "10" after 25 ns,
+            "11" after 35 ns;
+      assert bcd = "00" and led = "0001"
+        or bcd = "01" and led = "0010"
+        or bcd = "10" and led = "0100"
+        or bcd = "11" and led = "1000"
+        report "There is an incorrect value on the output led"
+        severity error;
+end architecture Struct_1;
+----
+
+## VHDL Constructs
+- https://www.csee.umbc.edu/portal/help/VHDL/stdpkg.html[Standard VHDL Packages]

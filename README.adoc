@@ -3,20 +3,23 @@
 === Background
 
 VHDL:: Very High Speed Integrated Circuit (VHSIC) Hardware Description Language (HDL), which is a programming language used to describe a logic circuit by function, data flow behavior, or structure.
+- superset of ADA programming language
 - VHDL is a highly concurrent language, built upon an event-based timing model.
 - VHDL is used to model digital designs
 - Both *.vhdl* and *.vhd* extensions are used for VHDL source files, while *.v* is used for Verilog.
+- Fast as no intermediate code is generated. Directly from VHDL -> machine code
+- VHDL is frequently used for two different goals: *simulation* of electronic designs and *synthesis* of such designs.
+- *Synthesis* is a process where a VHDL is compiled and mapped into an implementation technology such as an FPGA or an ASIC.
+- RTL or Data Flow Design:: programs are represented as Directed Graphs
 
-GHDL:: VHDL Compile
+https://ghdl.readthedocs.io/en/latest/[GHDL]:: VHDL Compile
 - is not a synthesis tool: you cannot create a netlist with GHDL (yet).
+- GHDL is an open-source simulator for the VHDL language. GHDL allows you to compile and execute your VHDL code directly in your PC.
 
 GtkWave::  graphical waveform viewer
 
-
-== Tools
-
-1. https://ghdl.readthedocs.io/en/latest/[GHDL is an open-source simulator for the VHDL language]. GHDL allows you to compile and execute your VHDL code directly in your PC.
-2. GTKWave
+RTL:: Register transfer level design abstraction which models a synchronous digital circuit in terms of the flow of digital signals (data) between hardware registers, and the logical operations performed on those signals.
+- Approach to digital design  or *dataflow* design. This is the method currently used for the design of complex logic circuits such as microprocessors.
 
 === A quickstart to GHDL and GTKWave
 
@@ -25,12 +28,18 @@ GtkWave::  graphical waveform viewer
 2. Navigate to the directory containing the design and testbench
 3. Compile and simulate the design with GHDL
 ----
-ghdl -s some_design.vhd testbench.vhd to check the syntax. This step step is optional.
-ghdl -a some_design.vhd testbench.vhd to analyze the design.
-ghdl -e testbench_entity_name to build an executable for the testbench.
-ghdl -r testbench_entity_name --vcd=file_name.vcd to simulate the design and dump the waveform to a file.
+ghdl -s some_design.vhd testbench.vhd               to check the syntax. This step step is optional.
+ghdl -a some_design.vhd testbench.vhd               to analyze the design.
+ghdl -e testbench_entity_name                       to build an executable for the testbench.
+ghdl -r testbench_entity_name --vcd=file_name.vcd   to simulate the design and dump the waveform to a file.
 ----
 4. Examine the waveform with GTKWave
 ----
-gtkwave file_name.vcd to launch GTKWave
+gtkwave file_name.vcd                               to launch GTKWave
 ----
+
+## More Resources
+
+- http://www.ece.ubc.ca/~edc/379/lectures/
+- https://github.com/vagizduseev/DresdenVHDL
+- https://github.com/DheerendraRathor/vhdl
