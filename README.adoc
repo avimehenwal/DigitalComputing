@@ -1,5 +1,17 @@
 = Digital Circuits
 
+=== Background
+
+VHDL:: Very High Speed Integrated Circuit (VHSIC) Hardware Description Language (HDL), which is a programming language used to describe a logic circuit by function, data flow behavior, or structure.
+- VHDL is a highly concurrent language, built upon an event-based timing model.
+- VHDL is used to model digital designs
+- Both *.vhdl* and *.vhd* extensions are used for VHDL source files, while *.v* is used for Verilog.
+
+GHDL:: VHDL Compile
+- is not a synthesis tool: you cannot create a netlist with GHDL (yet).
+
+GtkWave::  graphical waveform viewer
+
 
 == Tools
 
