@@ -7,7 +7,7 @@ VHDL:: Very High Speed Integrated Circuit (VHSIC) Hardware Description Language 
 - VHDL is used to model digital designs
 - Both *.vhdl* and *.vhd* extensions are used for VHDL source files, while *.v* is used for Verilog.
 - Fast as no intermediate code is generated. Directly from VHDL -> machine code
-- VHDL is frequently used for two different goals: simulation of electronic designs and synthesis of such designs.
+- VHDL is frequently used for two different goals: *simulation* of electronic designs and *synthesis* of such designs.
 - *Synthesis* is a process where a VHDL is compiled and mapped into an implementation technology such as an FPGA or an ASIC.
 
 https://ghdl.readthedocs.io/en/latest/[GHDL]:: VHDL Compile
