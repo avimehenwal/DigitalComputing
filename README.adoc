@@ -1,1 +1,24 @@
-# Digital Circuits
+= Digital Circuits
+
+
+== Tools
+
+1. https://ghdl.readthedocs.io/en/latest/[GHDL is an open-source simulator for the VHDL language]. GHDL allows you to compile and execute your VHDL code directly in your PC.
+2. GTKWave
+
+=== A quickstart to GHDL and GTKWave
+
+0. It is assumed that the design and testbench are created at this point.
+1. Launch a console window
+2. Navigate to the directory containing the design and testbench
+3. Compile and simulate the design with GHDL
+----
+ghdl -s some_design.vhd testbench.vhd to check the syntax. This step step is optional.
+ghdl -a some_design.vhd testbench.vhd to analyze the design.
+ghdl -e testbench_entity_name to build an executable for the testbench.
+ghdl -r testbench_entity_name --vcd=file_name.vcd to simulate the design and dump the waveform to a file.
+----
+4. Examine the waveform with GTKWave
+----
+gtkwave file_name.vcd to launch GTKWave
+----
