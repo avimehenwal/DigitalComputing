@@ -1,6 +1,11 @@
+## Compiling and running VHDL using GHDL
+
 ----
- 5738  ghdl -s hello.vhdl
- 5740  ghdl -a hello.vhdl
- 5742  ghdl -e hello-world
- 5745  ghdl -r hello_world
+ 5738  ghdl -s hello.vhdl     # syntax
+ 5740  ghdl -a hello.vhdl     # analyse
+ 5742  ghdl -e hello-world    # elaborate
+ 5745  ghdl -r hello_world    # run
 ----
+
+## VHDL Constructs
+- https://www.csee.umbc.edu/portal/help/VHDL/stdpkg.html[Standard VHDL Packages]
