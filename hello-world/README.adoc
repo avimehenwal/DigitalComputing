@@ -1,0 +1,6 @@
+----
+ 5738  ghdl -s hello.vhdl
+ 5740  ghdl -a hello.vhdl
+ 5742  ghdl -e hello-world
+ 5745  ghdl -r hello_world
+----
