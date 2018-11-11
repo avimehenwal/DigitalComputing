@@ -10,16 +10,17 @@ VHDL:: Very High Speed Integrated Circuit (VHSIC) Hardware Description Language 
 - Fast as no intermediate code is generated. Directly from VHDL -> machine code
 - VHDL is frequently used for two different goals: *simulation* of electronic designs and *synthesis* of such designs.
 - *Synthesis* is a process where a VHDL is compiled and mapped into an implementation technology such as an FPGA or an ASIC.
-- RTL or Data Flow Design:: programs are represented as Directed Graphs
+- RTL or Data Flow Design, programs are represented as Directed Graphs
+
+RTL:: Register transfer level design abstraction which models a synchronous digital circuit in terms of the flow of digital signals (data) between hardware registers, and the logical operations performed on those signals.
+- Approach to digital design  or *dataflow* design. This is the method currently used for the design of complex logic circuits such as microprocessors.
 
 https://ghdl.readthedocs.io/en/latest/[GHDL]:: VHDL Compile
-- is not a synthesis tool: you cannot create a netlist with GHDL (yet).
+- is not a synthesis tool: you cannot create a netlist with GHDL (yet). *A netlist* is a description of the connectivity of an electronic circuit. In its simplest form, a netlist consists of a list of the electronic components in a circuit and a list of the nodes they are connected to. A network (net) is a collection of two or more interconnected components.
 - GHDL is an open-source simulator for the VHDL language. GHDL allows you to compile and execute your VHDL code directly in your PC.
 
 GtkWave::  graphical waveform viewer
 
-RTL:: Register transfer level design abstraction which models a synchronous digital circuit in terms of the flow of digital signals (data) between hardware registers, and the logical operations performed on those signals.
-- Approach to digital design  or *dataflow* design. This is the method currently used for the design of complex logic circuits such as microprocessors.
 
 === A quickstart to GHDL and GTKWave
 
