@@ -39,9 +39,11 @@ ghdl -r testbench_entity_name --vcd=file_name.vcd   to simulate the design and d
 gtkwave file_name.vcd                               to launch GTKWave
 ----
 
-## More Resources
+'''
+### More Resources
 
-- http://www.ece.ubc.ca/~edc/379/lectures/
-- https://github.com/vagizduseev/DresdenVHDL
-- https://github.com/DheerendraRathor/vhdl
-- https://www.seas.upenn.edu/~ese171/vhdl/vhdl_primer.html#_Toc526061365
+. http://www.ece.ubc.ca/~edc/379/lectures/
+. https://github.com/vagizduseev/DresdenVHDL
+. https://github.com/DheerendraRathor/vhdl
+. https://www.seas.upenn.edu/~ese171/vhdl/vhdl_primer.html#_Toc526061365
+. http://www.vhdl.renerta.com/mobile/index.html
