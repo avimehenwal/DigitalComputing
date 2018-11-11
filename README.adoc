@@ -21,6 +21,7 @@ https://ghdl.readthedocs.io/en/latest/[GHDL]:: VHDL Compile
 
 GtkWave::  graphical waveform viewer
 
+IP Core:: https://en.wikipedia.org/wiki/Semiconductor_intellectual_property_core
 
 === A quickstart to GHDL and GTKWave
 
