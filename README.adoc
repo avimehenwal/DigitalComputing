@@ -48,4 +48,5 @@ gtkwave file_name.vcd                               to launch GTKWave
 . [X] https://github.com/DheerendraRathor/vhdl
 . https://www.seas.upenn.edu/~ese171/vhdl/vhdl_primer.html#_Toc526061365
 . [ ] http://www.vhdl.renerta.com/mobile/index.html
+. http://web.engr.oregonstate.edu/~traylor/ece474/vhdl_lectures/component_instantiaton.pdf
 ====  
