@@ -30,6 +30,7 @@ begin
 end architecture testbench_arch;
 ----
 <1> All the simulation results are reported using the *assert* and *report* statements.
+
 .syntax.assert
 [source,vhdl]
 ----
