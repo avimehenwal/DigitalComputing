@@ -44,3 +44,4 @@ gtkwave file_name.vcd                               to launch GTKWave
 - http://www.ece.ubc.ca/~edc/379/lectures/
 - https://github.com/vagizduseev/DresdenVHDL
 - https://github.com/DheerendraRathor/vhdl
+- https://www.seas.upenn.edu/~ese171/vhdl/vhdl_primer.html#_Toc526061365
