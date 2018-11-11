@@ -30,6 +30,11 @@ begin
 end architecture testbench_arch;
 ----
 <1> All the simulation results are reported using the *assert* and *report* statements.
+.syntax.assert
+[source,vhdl]
+----
+assert condition report string severity severity_level;
+----
 
 .test_bench.vhdl
 [source,vhdl]
