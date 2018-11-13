@@ -12,10 +12,10 @@
 [source,vhdl]
 ----
 entity testbench_ent is
-  <entity definition>
+  <entity definition>              // <1>
 end entity testbench_ent;
 
-architecture testbench_arch of testbench_ent is
+architecture testbench_arch of testbench_ent is    // <2>
 
   <signal declarations>
 
@@ -25,11 +25,13 @@ begin
 
   <component instantiations>
 
-  <stimuli (test vectors)>   // <1>
-  // <2>
+  <stimuli (test vectors)>   // <3>
+  
 end architecture testbench_arch;
 ----
-<1> All the simulation results are reported using the *assert* and *report* statements.
+<1> What is entity is defined in other design file? => leave blank BUT must be declared.
+<2> Note the architecture name, not behaviour, rtl or structural
+<3> All the simulation results are reported using the *assert* and *report* statements.
 
 .syntax.assert
 [source,vhdl]
