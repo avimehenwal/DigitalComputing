@@ -1,6 +1,6 @@
 entity hello_world is
   port ( clk: out std_logic);
-end hearbeat;
+end hello_world;
 
 architecture behaviour of hello_world is
 begin
