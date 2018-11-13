@@ -1,5 +1,5 @@
 entity hello_world is
-  port ( clk: out std_logic; )
+  port ( clk: out std_logic);
 end hearbeat;
 
 architecture behaviour of hello_world is
@@ -11,5 +11,5 @@ begin
     wait for clk_period/2;
     clk <= '1';
     wait for clk_period/2;
-  end process;
+  end clk_process;
 end behaviour;
