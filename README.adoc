@@ -35,6 +35,17 @@ ghdl -a some_design.vhd testbench.vhd               to analyze the design.
 ghdl -e testbench_entity_name                       to build an executable for the testbench.
 ghdl -r testbench_entity_name --vcd=file_name.vcd   to simulate the design and dump the waveform to a file.
 ----
+
+====
+----
+ghdl -r options
+--stop-time=10ns/ps
+--disp-time
+--wave=filename.ghw / --vcd=filename.vcd
+----
+====
+
+
 4. Examine the waveform with GTKWave
 ----
 gtkwave file_name.vcd                               to launch GTKWave
